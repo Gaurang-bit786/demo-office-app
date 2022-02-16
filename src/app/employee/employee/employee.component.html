@@ -1,0 +1,448 @@
+<mat-drawer-container>
+    
+        <mat-drawer  mode='side' [opened]="sideBarOpen">
+            <div class="image-bg">
+                <app-sidenav></app-sidenav>
+            </div>
+        </mat-drawer>
+    
+        <mat-drawer-content>
+            <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+            
+<form  class="  p-2 " >
+    <button class="my-4 " mat-raised-button ><mat-icon>add</mat-icon>Employee Details</button>
+<mat-horizontal-stepper>
+    <mat-card>
+    <mat-step label="Personal Detail " class="border">
+        <div class="">
+            <div class="row ">
+                <div class="col-md">
+                    <label for_="Image"  >Upload Image:</label><br/>
+                    <input type="file" (change)="imageFile1($event)" ngModel  name="image1"  id="">
+                </div>
+                <div class="col-md">
+                    <label for_="familImage " >Upload Family Image:</label><br/>
+                    <input type="file" (change)="imageFile2($event)" ngModel name="image2"  id="">
+
+                </div>
+            </div>
+            
+            <div class="form-group row mt-3">
+                
+            </div>
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for_="firstname">Employee Code:</label>
+                    <input type="text" ngModel name="employeecode" class="form-control form-control-sm" placeholder="EMP0002">
+                </div>
+                <div class="col-md ">
+                    <label for_="firstname">Existing Employee Code:</label>
+                    <input type="text" ngModel name="existingCode" class="form-control form-control-sm" placeholder="Existing Employee Code">
+                </div>
+                <div class="col-md">
+                    <label for_="firstname">Firstname:</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <select  name="surname" class="form-control form-control-sm">
+                                <option value="Mr.">Mr.</option>
+                                <option value="Mrs.">Mrs.</option>
+                            </select>
+                        </div> 
+                        
+                        <input type="text" name="firstname" class="form-control form-control-sm" id="validationDefaultUsername" placeholder="Firstname" aria-describedby="inputGroupPrepend2" required>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <label for_="middlename">Middlename:</label>
+                    <input type="text" ngModel name="middlename" class="form-control form-control-sm " placeholder="Middlename">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for_="lastname">Lastname:</label>
+                    <input type="text" ngModel name="lastname" class="form-control form-control-sm " placeholder="Lastname">
+                </div>
+                <div class="col-md">
+                    <label for_="gender">Gender:</label>
+                    <div class="form-check">
+                        
+                        <input class="form-check-input" type="radio" name="gender" id="blankRadio1" value="Male" aria-label="..."> Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="form-check-input " type="radio" name="gender" id="blankRadio1" value="Female" aria-label="..."> Female
+                    </div>
+                </div>
+                <div class="col-md">
+                    <label for_="dob">Date Of Birth:</label>
+                    <input type="date" ngModel name="dob" class="form-control  form-control-sm"  placeholder="Date Of Birth">
+                </div>
+                <div class="col-md">
+                    <label for_="matitialStatus">Maritial Status:</label>
+                    <select name="matitialStatus" class="form-control form-control-sm" id="surname">
+                        <option class="form-control form-control-sm">Maritial</option>
+                        <option value="Mr." class="form-control  form-control-sm">Single</option>
+                        <option value="Mrs." class="form-control  form-control-sm">Married</option>
+                        <option value="Mrs." class="form-control  form-control-sm">Divorced</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                
+                <div class="col-md">
+                    <label for_="bloodgoorup">Blood Group:</label>
+                    <select name="bloodgoorup" class="form-control form-control-sm" id="surname">
+                        <option class="form-control form-control-sm">Blood Group</option>
+                        <option value="Mr." class="form-control  form-control-sm">A+</option>
+                        <option value="Mr." class="form-control  form-control-sm">A-</option>
+                        <option value="Mrs." class="form-control  form-control-sm">B+</option>
+                        <option value="Mrs." class="form-control  form-control-sm">B-</option>
+                        <option value="Mrs." class="form-control  form-control-sm">AB+</option>
+                        <option value="Mrs." class="form-control  form-control-sm">AB-</option>
+                        <option value="Mrs." class="form-control  form-control-sm">O+</option>
+                        <option value="Mrs." class="form-control  form-control-sm">O-</option>
+                    </select>
+                </div>
+                <div class="col-md">
+                    <label for_="religion">Religion:</label>
+                    <input type="text" name="religion" placeholder="Religion" class="form-control form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for_="category">Category:</label>
+                    <select name="category" class="form-control form-control-sm" id="surname">
+                        <option class="form-control form-control-sm">Category</option>
+                        <option value="General" class="form-control  form-control-sm">General</option>
+                        <option value="OBC" class="form-control  form-control-sm">OBC</option>
+                        <option value="SC/ST" class="form-control  form-control-sm">SC/ST</option>
+                        <option value="Other" class="form-control  form-control-sm">Other</option>
+                    </select>
+                </div>
+                <div class="col-md">
+                    <label for_="fathername">Fathername:</label>
+                    <input type="text" name="fathername" placeholder="Father/Husband Name" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                
+            </div>
+        </div>
+        <div>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+    <mat-step label="Contact Details">
+        <div >
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for_="mobile">Mobile:</label>
+                    <input type="text" ngModel name="mobile" class="form-control  form-control-sm" placeholder="Mobile No.">
+                </div>
+                <div class="col-md">
+                    <label for_="altMobile">Alternative Mobile:</label>
+                    <input type="text" ngModel name="altMobile" class="form-control  form-control-sm" placeholder="Alternative">
+                </div>
+                <div class="col-md">
+                    <label for_="email">Email:</label>
+                    <input type="email" ngModel name="email" class="form-control  form-control-sm" placeholder="Email Id">
+                </div>
+                <div class="col-md">
+                    <label for_="address">Address:</label>
+                    <input type="text" ngModel name="address" class="form-control  form-control-sm" placeholder="Address">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for_="state">State:</label>
+                    <input type="text" ngModel name="state" class="form-control  form-control-sm" placeholder="State">
+                </div>
+                <div class="col-md">
+                    <label for_="country">Country:</label>
+                    <input type="text" ngModel name="country" class="form-control  form-control-sm" placeholder="Country">
+                </div>
+                <div class="col-md">
+                    <label for_="city">City:</label>
+                    <input type="text" ngModel name="city" class="form-control  form-control-sm" placeholder="City">
+                </div>
+                <div class="col-md">
+                    <label for_="mailaddress">Mail Address:</label>
+                    <input type="text" ngModel name="mailaddress" class="form-control  form-control-sm" placeholder="Mail address">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for_="state">State:</label>
+                    <input type="text" ngModel name="state" class="form-control  form-control-sm" placeholder="State">
+                </div>
+                <div class="col-md">
+                    <label for_="country">Country:</label>
+                    <input type="text" ngModel name="country" class="form-control  form-control-sm" placeholder="Country">
+                </div>
+                <div class="col-md">
+                    <label for_="city">City:</label>
+                    <input type="email" ngModel name="city" class="form-control  form-control-sm" placeholder="City">
+                </div>
+                <div class="col-md"></div>
+            </div>
+        </div>
+      <div>
+          <button class="mx-1" mat-button class="mx-1" matStepperPrevious>Back</button>
+          <button class="mx-1" mat-button class="mx-1" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+  
+    <mat-step label="Organisation Details">
+        <div >
+ 
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for="cardNo">Card No:</label>
+                    <input type="text" ngModel name="cardNo"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Joining Date</label>
+                    <input type="date" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Confirm Date</label>
+                    <input type="date" ngModel name="confirmDate" class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Employee Type</label>
+                    <input type="text" ngModel name="empType"  class="form-control  form-control-sm">
+                </div>
+                
+            </div>
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for="department">Department</label>
+                    <select name="department" class="form-control form-control-sm" >
+             
+                        <option *ngFor="let item of data">{{ item.email }}</option>
+               
+                    </select>
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Sub Designation:</label>
+                    <input type="text" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Reporting Department</label>
+                    <input type="text" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Reporting Sub Department</label>
+                    <input type="text" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for="cardNo">Reporting To</label>
+                    <input type="text" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Department</label>
+                    <input type="text" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">E.P.F No</label>
+                    <input type="text" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Start Date</label>
+                    <input type="date" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for="cardNo">ESCI No</label>
+                    <input type="text" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Employee Grade</label>
+                    <input type="text" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Type</label>
+                    <input type="text" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Company</label>
+                    <input type="date" ngModel name="joiningDate"  class="form-control  form-control-sm">
+                </div>
+            </div>
+            
+        </div>
+        <div>
+            <button class="mx-1" mat-button matStepperPrevious>Back</button>
+            <button class="mx-1" mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      
+    <mat-step label="Earning Details">
+        <div>
+
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for="cardNo">Basic Pay:</label>
+                    <input type="number" ngModel name="basicPay"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">DA:</label>
+                    <input type="number" ngModel name="da"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">HRA:</label>
+                    <input type="number" ngModel name="hra"   class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Gross Salary:</label>
+                    <input type="number"   name="grossSalary"  ngModel class="form-control  form-control-sm">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="mx-1" mat-button matStepperPrevious>Back</button>
+            <button class="mx-1" mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step label="Other Details">
+        <div >
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for="cardNo">Aadhaar Card:</label>
+                    <input type="text" ngModel name="basicPay"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Pan No:</label>
+                    <input type="text" ngModel name="da"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">D/L No:</label>
+                    <input type="text" ngModel name="hra"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Voter ID:</label>
+                    <input type="text"   name="grossSalary"  ngModel class="form-control  form-control-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="cardNo">Passport No:</label>
+                    <input type="text" ngModel name="basicPay"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md-3">
+                    <label for="cardNo">Rashan Card:</label>
+                    <input type="text" ngModel name="da"  class="form-control  form-control-sm">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="mx-1" mat-button matStepperPrevious>Back</button>
+            <button class="mx-1" mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step label="Bank Details">
+        <div >
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for="cardNo">Bank Name:</label>
+                    <input type="text" ngModel name="basicPay"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Branch Name:</label>
+                    <input type="text" ngModel name="da"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">IFSC Code:</label>
+                    <input type="text" ngModel name="hra"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Account No:</label>
+                    <input type="text"   name="grossSalary"  ngModel class="form-control  form-control-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="cardNo">IFSC Code:</label>
+                    <input type="text" ngModel name="basicPay"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md-3">
+                    <label for="cardNo">Account No:</label>
+                    <input type="text" ngModel name="da"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md-3">
+                    <label for="cardNo">Attach Document:</label>
+                    <input type="file" ngModel name="da"  class="form-control form-control-sm">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="mx-1" mat-button matStepperPrevious>Back</button>
+            <button class="mx-1" mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step label="Qualification">
+        <div >
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for="cardNo">Qualification:</label>
+                    <input type="text" ngModel name="basicPay"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Course:</label>
+                    <input type="text" ngModel name="da"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">University/Board:</label>
+                    <input type="text" ngModel name="hra"   class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Year:</label>
+                    <input type="text"   name="grossSalary"  ngModel class="form-control  form-control-sm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="cardNo">Aggregate:</label>
+                    <input type="text" ngModel name="basicPay"  class="form-control  form-control-sm">
+                </div>
+            </div>
+        </div> 
+        <div>
+            <button class="mx-1" mat-button matStepperPrevious>Back</button>
+            <button class="mx-1" mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step label="Family Details">
+        <div>
+            <div class="form-group row">
+                <div class="col-md">
+                    <label for="cardNo">Name of Member:</label>
+                    <input type="text" ngModel name="basicPay"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Relation with Employee:</label>
+                    <input type="text" ngModel name="da"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Residing With Employee:</label>
+                    <input type="text" ngModel name="hra"  class="form-control  form-control-sm">
+                </div>
+                <div class="col-md">
+                    <label for="cardNo">Dependent on Employee:</label>
+                    <input type="text"   name="grossSalary"  ngModel class="form-control  form-control-sm">
+                </div>
+            </div>  
+        </div>
+  
+        <div>
+            <button (click) = "onSubmit($event)" class="btn btn-primary  mx-2">Submit</button>
+            <button type="reset" class="btn btn-info">Reset</button>
+        </div>
+      </mat-step>
+    </mat-card>
+</mat-horizontal-stepper>
+
+</form>
+
+    </mat-drawer-content>
+
+</mat-drawer-container>

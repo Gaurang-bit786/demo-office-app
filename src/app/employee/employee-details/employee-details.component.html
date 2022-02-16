@@ -1,0 +1,118 @@
+<mat-drawer-container>
+  <mat-drawer mode='side' [opened]="sideBarOpen">
+      <div class="image-bg">
+        <app-sidenav></app-sidenav>
+      </div>
+  </mat-drawer>
+  <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+<div class="container my-4">
+    <div class="row text-center">
+        <div class="col-10">
+            <input type="search" class="form-control" name=""  id="" placeholder="Search">
+        </div>
+        <div class="col-2">
+            <button class="btn btn-outline-primary">Search</button>
+        </div>
+    </div>
+</div>
+<div class="container bg-light p-3 rounded ">
+    <div class="row mb-2">
+        <div class="col"><button mat-raised-button color="primary"><i class="fa fa-plus" aria-hidden="true"> Add Employee</i></button></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-secondary">
+                  <tr class="thead-secondary">
+                    <th scope="">S no</th>
+                    <th scope="">Name</th>
+                    <th scope="">Email</th>
+                    <th scope="">Department</th>
+                    <th scope="">Mobile</th>
+                    <th scope="">Phone</th>
+                    <th scope="">Action</th>
+                  </tr>
+                </thead>
+                <tbody clas="mt-5">
+                  <tr>
+                    <th scope="row"><button mat-button >1</button></th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>
+                        <button class="btn btn-primary mx-1" (click)="delete()"> <i class="fa fa-trash" aria-hidden="true"></i> </button>
+                        <button class="btn btn-danger mx-1"> <i class="fa fa-edit" aria-hidden="true"></i> </button>
+                        <button data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="btn btn-success mx-1"> <i class="fa fa-eye" aria-hidden="true"></i> </button>
+                    </td>
+                  </tr>
+                  <tr >
+                      <td colspan="7">
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                <p class="text-dark font-weight-bold">Address: Address</p>
+                                <p class="text-dark font-weight-bold">Qualification: Qualification</p>
+                                <p class="text-dark font-weight-bold">Profile Pic : <img src="http://127.0.0.1:4200/assets/user.jpg" /></p>
+                                <p class="text-dark font-weight-bold">Qualification: Qualification</p>
+                                <p class="text-dark font-weight-bold">Qualification: Qualification</p>
+                                <p class="text-dark font-weight-bold">Qualification: Qualification</p>
+                                <p class="text-dark font-weight-bold">Qualification: Qualification</p>
+                            </div>
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><button mat-button >2</button></th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>
+                        <button class="btn btn-primary mx-1" (click)="delete()"> <i class="fa fa-trash" aria-hidden="true"></i> </button>
+                        <button class="btn btn-danger mx-1"> <i class="fa fa-edit" aria-hidden="true"></i> </button>
+                        <button class="btn btn-success mx-1"  data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1"> <i class="fa fa-eye" aria-hidden="true"></i> </button>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td colspan="7">
+                        <div class="collapse" id="collapseExample1">
+                            <div class="card card-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                            </div>
+                          </div>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col ">
+            <nav aria-label="..."  >
+                <ul class="pagination ">
+                  <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                  </li>
+                  <li class="page-item active"><a class="page-link" >1<span class="sr-only">(current)</span></a></li>
+                  <li class="page-item  ">
+                    <span class="page-link">
+                      2
+                      
+                    </span>
+                  </li>
+                  <li class="page-item"><a class="page-link" >3</a></li>
+                  <li class="page-item">
+                    <a class="page-link">Next</a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+    </div>
+</div>
+
+
+</mat-drawer-content>
+</mat-drawer-container>

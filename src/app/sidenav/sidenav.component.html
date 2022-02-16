@@ -1,0 +1,82 @@
+<mat-nav-list >  
+    <div class="logo py-1">
+        <div class="row">
+            <div class="col-2">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/angular-icon-1-logo-png-transparent.png" >
+            </div>
+            <div class="col">
+                <h2 class="mt-1">CREATIVE TIM</h2>
+            </div>
+        </div>
+        
+    </div>
+    <div>
+        <mat-divider class="mx-3"></mat-divider>
+        <a mat-list-item  >
+            
+            <img src="../../assets/user.jpg" class="profile">
+            <button  (click)="collapse.toggle()" [attr.aria-expanded]="!profileCollapsed" aria-controls="collapseExample" class="font-weight text-light mx-2 username" > {{getUser()}} </button>
+            
+        </a>
+
+        
+  
+        <div mat-list-item  #collapse="ngbCollapse" [(ngbCollapse)]="profileCollapsed">
+            <a mat-list-item class="text-center">
+               <h3 ><span class="mr-3">MP</span>My Profle</h3>
+            </a>
+            <a mat-list-item>
+                <h3 ><span class="mr-3">EP</span>Edit Profle</h3>
+             </a>
+             <a mat-list-item>
+                <h3 ><span class="mr-3">S</span>Settings</h3>
+             </a>
+        </div>
+        <mat-divider class="mx-3"></mat-divider>
+
+        <!-- Dashboard -->
+        <a mat-list-item [routerLink]="['/dashboard']" class="active"  routerLinkActive="list-item-active" >
+            <mat-icon >dashboard</mat-icon><button class="font-weight text-light">DASHBOARD</button>
+        </a>
+
+        <!-- Employee -->
+        <a mat-list-item   class=" font-weight text-light" (click)="employeeToggle.toggle()" [attr.aria-expanded]="!employeeCollapsed"
+        aria-controls="collapseExample">
+            <mat-icon>account_circle</mat-icon>
+            <button class=" font-weight text-light" type="button" >
+            Employee
+            </button>
+        </a>
+        <div #employeeToggle="ngbCollapse" class="mat-links-hide font-weight text-light"  [(ngbCollapse)]="employeeCollapsed">
+            <ul>
+                <li>
+                    <a  [routerLink]="['/employee']"  routerLinkActive="list-item-active" class="emp-menu-item " mat-menu-item><mat-icon class=" font-weight text-light" >add</mat-icon>Add Employee</a>
+                </li>
+                <li>
+                    <a  [routerLink]="['/employee/details']"  routerLinkActive="list-item-active" class="emp-menu-item" mat-menu-item><mat-icon class=" font-weight text-light" >list</mat-icon>Employee Details</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Company  -->
+        <a mat-list-item   side-nav-button  class=" font-weight text-light active" (click)="companyToggle.toggle()" [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample">
+   
+                <mat-icon>account_circle</mat-icon>
+                <button class=" font-weight text-light" type="button" >
+                Company 
+                </button><mat-icon class="ml-5">arrow_drop_down</mat-icon>
+  
+        </a>
+        <div #companyToggle="ngbCollapse" class=" font-weight text-light"  [(ngbCollapse)]="isCollapsed">
+            <ul>
+                <li>
+                    <a  [routerLink]="['/organisation']"  class="emp-menu-item" mat-menu-item><mat-icon class=" font-weight text-light">add</mat-icon>Add Company</a>
+                </li>
+                <li>
+                    <a  [routerLink]="['/organisation/details']" routerLinkActive="list-item-active" class="emp-menu-item" mat-menu-item><mat-icon class=" font-weight text-light">list</mat-icon>Company Details</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</mat-nav-list>

@@ -1,0 +1,261 @@
+<mat-drawer-container>
+  <mat-drawer mode='side' [opened]="sideBarOpen">
+    <div class="image-bg">
+      <app-sidenav></app-sidenav>
+      </div>
+  </mat-drawer>
+  <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+<form class="bg-white mt-3 p-2">
+    <button mat-raised-button color="primary">Add Company</button>
+<mat-horizontal-stepper>
+    <mat-step label="Company Details" state="phone">
+      <div class="row">
+        <div class="col-md form-group">
+          <label for_="companyImage">Company Image:</label>
+          <input type="file" name="companyImage"  id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="cmpname">Company Name:</label>
+          <input type="text" name="cmpname" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="address">Address:</label>
+          <input type="text" name="address" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="country">Country:</label>
+          <input type="text" name="country" class="form-control form-control-sm" id="">
+        </div>
+      </div>  
+        <div class="row">
+          
+          <div class="col-md form-group">
+            <label for_="state">State:</label>
+            <input type="text" name="state" class="form-control form-control-sm" id="">
+          </div>
+          <div class="col-md form-group">
+            <label for_="pin">Pin:</label>
+            <input type="text" name="pin" class="form-control form-control-sm" id="">
+          </div>
+          <div class="col-md form-group">
+            <label for_="regType">Registration Type:</label>
+            <input type="text" name="regType" class="form-control form-control-sm" id="">
+          </div>
+          <div class="col-md form-group">
+            <label for_="orgType">Organisaton Type:</label>
+            <input type="text" name="orgType" class="form-control form-control-sm" id="">
+          </div>
+        </div>
+        
+      <div>
+        <div class="row">
+          <div class="col-md form-group">
+            <label for_="contact1">Contact1:</label>
+            <input type="text" name="contact1" class="form-control form-control-sm" id="">
+          </div>
+          <div class="col-md form-group">
+            <label for_="contact2">Contact2:</label>
+            <input type="text" name="contact2" class="form-control form-control-sm" id="">
+          </div>
+          <div class="col-md form-group">
+            <label for_="fax">Fax:</label>
+            <input type="text" name="fax" class="form-control form-control-sm" id="">
+          </div>
+          <div class="col-md form-group">
+            <label for_="email">Email:</label>
+            <input type="email" name="email" class="form-control form-control-sm" id="">
+          </div>
+        </div>
+      <div>
+        <div class="row">
+          <div class="col-md form-group">
+            <label for_="website">Website:</label>
+            <input type="text" name="website" class="form-control form-control-sm" id="">
+          </div>
+          <div class="col-md"></div>
+          <div class="col-md"></div>
+          <div class="col-md"></div>
+        </div>
+
+      </div>
+        <button mat-raised-button matStepperNext color="primary">Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step label="Other Details" state="chat">
+      <div class="row">
+        <div class="col-md form-group">
+          <label for_="bin">BIN:</label>
+          <input type="text" name="bin" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="cstNo">CST No:</label>
+          <input type="text" name="cstNo" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="panNo">PAN No:</label>
+          <input type="text" name="panNo" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="iecCode">IEC Code:</label>
+          <input type="text" name="iecCode" class="form-control form-control-sm" id="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md form-group">
+          <label for_="selfsealFno">Self Seal F.No:</label>
+          <input type="text" name="selfsealFno" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="gstNO">GST NO.:</label>
+          <input type="text" name="gstNO" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="regCin">Reg/CIN:</label>
+          <input type="text" name="regCin" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="othertax">Other Tax:</label>
+          <input type="text" name="othertax" class="form-control form-control-sm" id="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md form-group">
+          <label for_="vaTiNo">VAT/TIN No.:</label>
+          <input type="text" name="vaTiNo" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md"></div>
+        <div class="col-md"></div>
+        <div class="col-md"></div>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step label="Bank Details">
+      <div class="row">
+        <div class="col-md form-group">
+          <label for_="bankName">Bank Name *:</label>
+          <input type="text" name="bankName" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="branchname">Banch Name:</label>
+          <input type="text" name="branchname" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="ifscCode">IFSC Code:</label>
+          <input type="text" name="ifscCode" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="accountNo">Account No:</label>
+          <input type="text" name="accountNo" class="form-control form-control-sm" id="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md form-group">
+          <label for_="address">Address :</label>
+          <input type="text" name="bankAddress" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="branchName">Banch Name:</label>
+          <input type="text" name="branchName" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          <label for_="sCode">Swift Code:</label>
+          <input type="text" name="sCode" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md form-group">
+          
+        </div>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Intermediatery Bank Detail">
+      <div class="row">
+        <div class="col-md form-group">
+          <label for_="bankname">Bank Name:</label>
+          <input type="text" name="bankname" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md">
+          <label for_="rotedThrough">Routed through:</label>
+          <input type="text" name="rotedThrough" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md">
+          <label for_="altbankname">Bank Name:</label>
+          <input type="text" name="altbankname" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md">
+          <label for_="altBranchname">Branch Name:</label>
+          <input type="text" name="altBranchname" class="form-control form-control-sm" id="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md form-group">
+          <label for_="altIfsc">IFSC Code:</label>
+          <input type="text" name="altIfsc" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md">
+          <label for_="altAccount">Account No.:</label>
+          <input type="text" name="altAccount" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md">
+          <label for_="altAddress">Address:</label>
+          <input type="text" name="altAddress" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md">
+          <label for_="swiftCode">Swift Code:</label>
+          <input type="text" name="swiftCode" class="form-control form-control-sm" id="">
+        </div>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Administration Details">
+      
+      <div class="row">
+        <div class="col-md form-group">
+          <label for_="cpType">Contact Person Type:</label>
+          <input type="text" name="cpType" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md">
+          <label for_="personName">Person Name:</label>
+          <input type="text" name="personName" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md">
+          <label for_="mobileNo">Mobile No.:</label>
+          <input type="text" name="mobileNo" class="form-control form-control-sm" id="">
+        </div>
+        <div class="col-md">
+          <label for_="adminemail">Email Id:</label>
+          <input type="text" name="adminemail" class="form-control form-control-sm" id="">
+        </div>
+      </div>
+      <div>
+        <button mat-button type="submit">Submit</button>
+        <button mat-button type="reset">Reset</button>
+      </div>
+    </mat-step>
+
+    <!-- Icon overrides. -->
+    <ng-template matStepperIcon="phone">
+      <mat-icon>call_end</mat-icon>
+    </ng-template>
+
+    <ng-template matStepperIcon="chat">
+      <mat-icon>forum</mat-icon>
+    </ng-template>
+
+  </mat-horizontal-stepper>
+  
+</form>
+
+</mat-drawer-content>
+</mat-drawer-container>

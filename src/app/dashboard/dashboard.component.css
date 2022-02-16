@@ -1,0 +1,24 @@
+
+mat-drawer{
+  background-color:rgb(229,64,71);
+}
+
+
+mat-drawer-container{
+  background-color: #eef2f7;
+  height: 100%;
+}
+
+mat-drawer{
+  background-image: url("https://demos.creative-tim.com/light-bootstrap-dashboard-pro-angular2/assets/img/full-screen-image-1.jpg");  
+  background-repeat: none;
+  background-size: cover;
+}
+
+mat-drawer .image-bg{
+  background-color:rgb(229,64,71);
+  opacity: 0.8;
+  height:100%;
+}
+
+

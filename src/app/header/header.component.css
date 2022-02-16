@@ -1,0 +1,39 @@
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+ul{
+    list-style: none;
+    columns:4;
+}
+
+
+
+button{
+    outline: none;
+    border:0;
+    background: transparent;
+}
+
+.user{
+    font-size:14px;
+}
+
+.form-control:focus-visible{
+    outline: none;
+}
+
+.user-image{
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+}
+
+.menu-toggle{
+    background-color: rgb(229,64,71);
+    color: white;
+}

@@ -1,0 +1,113 @@
+.container{
+    border-radius: 20px;
+}
+mat-drawer{
+  background-color:rgb(229,64,71);
+  
+}
+
+mat-drawer{
+  background-image: url("https://sb.kaleidousercontent.com/67418/220x147/582a56371b/01_cars3.jpg");  
+  background-repeat: none;
+  background-size: cover;
+}
+
+mat-drawer .image-bg{
+  background-color:rgb(229,64,71);
+  opacity: 0.8;
+  height:100%;
+}
+
+
+
+
+.active{
+  background: rgb(209,64,71) !important;
+}
+
+mat-drawer::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+mat-drawer-container{
+  background-color: #eef2f7;
+  height: 100%;
+
+}
+
+
+
+
+
+
+button{
+  background-color:#34495e;
+  color:white;
+}
+
+.input-type{
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.image-container {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  
+  .drag-area {
+    height: 180px;
+    border: 3px dashed #e0eafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+  }
+  
+  h3 {
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  .drag-area .icon {
+    font-size: 50px;
+    color: #1683ff;
+  }
+  
+  .drag-area .header {
+    font-size: 20px;
+    font-weight: 500;
+    color: #34495e;
+  }
+  
+  .drag-area .support {
+    font-size: 12px;
+    color: gray;
+    margin: 10px 0 15px 0;
+  }
+  
+  .drag-area .button {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1683ff;
+    cursor: pointer;
+  }
+  
+  .drag-area.active {
+    border: 2px solid #1683ff;
+  }
+  
+  .drag-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
